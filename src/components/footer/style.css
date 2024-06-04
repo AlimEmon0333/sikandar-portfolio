@@ -1,0 +1,26 @@
+:root {
+  --darkGreen: #092327;
+  --lightGreen: #0b5351;
+  --info: #00a9a5;
+  --font-1: "Montserrat", sans-serif;
+  --font-2: "Ubuntu", sans-serif;
+}
+.footer {
+  background-color: #092327;
+  height: 60vh;
+}
+.facebook-icon-footer,
+.tiktok-icon-footer,
+.linkedin-icon-footer,
+.youtube-icon-footer {
+  font-size: 25px;
+  margin: 0px 15px;
+  color: var(--lightGreen);
+}
+.facebook-icon-footer:hover,
+.tiktok-icon-footer:hover,
+.linkedin-icon-footer:hover,
+.youtube-icon-footer:hover {
+  color: var(--info);
+  cursor: pointer;
+}

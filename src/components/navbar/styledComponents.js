@@ -1,25 +1,29 @@
 import styled from "styled-components";
 
 export const Nav = styled.div`
-  background-color: #092327;
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1rem;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 10;
+  left : 0;
+  right : 0;
+  bottom : 0;
+  z-index: 99;
+  trastion: 0.8s;
   @media (max-width: 960px) {
     trastion: 0.8s all ease;
   }
-`;
-export const NavContainer = styled.div`
+  `;
+  export const NavContainer = styled.div`
+  trastion: 0.8s;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  z-index: 1;
+  z-index: 99;
   width: 100%;
   padding: 0 24px;
   max-width: 1200px;

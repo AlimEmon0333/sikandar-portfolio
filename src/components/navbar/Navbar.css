@@ -1,0 +1,126 @@
+:root {
+  --darkBlue: #093763;
+  --darkGreen: #092327;
+  --lightBlue: #72aad9;
+  --regular: #286ca4;
+  --Title-font: "Cinzel", serif;
+  --para-font: "Nunito", sans-serif;
+}
+
+/* Basic Navbar styles */
+.navbarr {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+  animation: navbarFade 1s ease forwards;
+}
+
+.scrolled {
+  background-color: var(--darkGreen);
+}
+
+@keyframes navbarFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.navbar-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  animation: logoFade 1.5s ease forwards;
+  margin: 0px 50px;
+}
+
+@keyframes logoFade {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-links {
+  display: flex;
+  gap: 40px;
+
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: var(--Title-font);
+  margin: 0px 10px;
+  font-weight: bolder;
+}
+
+.navbar-links a:hover {
+  color: #ff5733;   
+}
+
+.navbar-toggle {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Animation for links */
+.navbar-links a {
+  animation: linkFade 0.5s ease forwards;
+}
+
+@keyframes linkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-links {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 300px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #092327;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+
+  .navbar-links.open {
+    transform: translateX(0);
+  }
+
+  .navbar-toggle {
+    display: block;
+    z-index: 2000;
+  }
+  .navbar-logo {
+  margin: 0px ;
+}
+}
